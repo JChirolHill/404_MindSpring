@@ -22,14 +22,21 @@ body {
 
 body.light-mode {
   background-image: url('/images/morning_background.jpg');
+  background-color: var(--light);
 }
 
 body.dark-mode {
   background-image: url('/images/night_background.jpg');
+  background-color: var(--DM_dark);
+  color: #fff;
 }
 
 #displayContainer .nav-link:hover {
   border-color: transparent;
+}
+
+a {
+  transition: all 0.25s;
 }
 
 .light-mode a {
@@ -53,11 +60,17 @@ a.active {
 }
 
 #title {
+  margin-top: 60px;
   color: #fff;
   font-size: 70px;
   text-align: center;
   font-family: 'RomanSD';
   text-shadow: 2px 2px 10px var(--dark);
+}
+
+#title span {
+  margin-top: -30px;
+  display: block;
 }
 
 #title a {
@@ -91,6 +104,108 @@ a.active {
 
 .dark-mode #displayContainer {
   background-color: rgba(16, 41, 97, 0.7);
+}
+
+#displayContent {
+  padding: 10px 0px;
+  font-size: 20px;
+}
+
+#not_found {
+  height: 300px;
+  font-size: 30px;
+}
+
+#group_code {
+  background-color: #fff;
+  padding: 0 5px;
+  margin: 10px;
+  font-size: 28px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.light-mode #group_code {
+  color: var(--highlight);
+}
+
+.dark-mode #group_code {
+  color: var(--DM_highlight);
+}
+
+.border_bisection {
+  border-bottom: #fff solid 1px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.btn_text {
+  background-color: transparent;
+  border: none;
+}
+
+.btn_text:focus, #displayContent input:focus {
+  outline: none;
+  border: none;
+}
+
+.btn_text i {
+  transition: all 0.25s;
+}
+
+.btn_text:hover i {
+  transform: rotate(-45deg);
+}
+
+.light-mode .btn_text {
+  color: var(--primary);
+}
+
+.dark-mode .btn_text {
+  color: var(--DM_primary);
+}
+
+.light-mode .btn
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.light-mode .filled-leaf {
+  color: var(--primary);
+}
+
+.dark-mode .filled-leaf {
+  color: var(--DM_primary);
+}
+
+.light-mode .clickable:hover svg {
+  color: var(--secondary);
+}
+
+.dark-mode .clickable:hover svg {
+  color: var(--DM_highlight);
+}
+
+.error_msg {
+  color: var(--danger);
+}
+
+@media (min-width: 576px) {
+  #title {
+    font-size: 70px;
+  }
+
+  #title span {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .border_bisection {
+    border-bottom: none;
+    border-right: #fff solid 1px;
+  }
 }
 
 @font-face {
