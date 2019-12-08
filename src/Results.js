@@ -23,6 +23,7 @@ export default function Results(props) {
       if (!props.responses || props.responses.length === 0) {
         setRedirectHome(true);
       }
+      console.log(props.responses);
       setResponses(props.responses);
     } else {
       getSimilarities(code).then(response => {
@@ -56,12 +57,7 @@ export default function Results(props) {
                       />
                     )}
                     {promptSet[0].type === "picture" && (
-                      <Image
-                        url={promptSet[0].url.replace(
-                          /(\/[0-9]+){2}$/,
-                          "/200/200"
-                        )}
-                      />
+                      <Image url={promptSet[0].url} />
                     )}
                   </div>
                   <div className="col col-md-12">
@@ -72,12 +68,7 @@ export default function Results(props) {
                       />
                     )}
                     {promptSet[1].type === "picture" && (
-                      <Image
-                        url={promptSet[1].url.replace(
-                          /(\/[0-9]+){2}$/,
-                          "/200/200"
-                        )}
-                      />
+                      <Image url={promptSet[1].url} />
                     )}
                   </div>
                 </div>

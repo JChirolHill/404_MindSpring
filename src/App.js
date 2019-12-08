@@ -12,6 +12,7 @@ import GroupSetUpMenu from './GroupSetUpMenu';
 import Waiting from './Waiting';
 import Game from './Game';
 import Results from './Results';
+import Examples from './Examples';
 
 export default function App() {
   const darkMode = useDarkMode(false);
@@ -93,7 +94,7 @@ export default function App() {
                   </Route>
                   <Route path="/multiplayer/results/:code" exact
                     render={(props) => <Results {...props} solo={false} code={groupCode} onSetCode={setGroupCode}/>}/>
-                  <Route path="/examples"/>
+                  <Route path="/examples" component={Examples}/>
                   <Route component={PageNotFound}/>
                 </Switch>
               </DocumentTitle>

@@ -224,6 +224,7 @@ a.active {
 .rand_picture img {
   margin-bottom: 10px;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .player-result:nth-child(odd) {

@@ -11,7 +11,7 @@ export default function Game(props) {
   const [prompts, setPrompts] = useState([]);
 
   const [similarity, setSimilarity] = useState("");
-  const [similarities, setSimilarities] = useState([]);
+  const [similarities] = useState([]);
 
   const [currP1, setCurrP1] = useState({});
   const [currP2, setCurrP2] = useState({});
@@ -29,7 +29,6 @@ export default function Game(props) {
   // load all the prompts
   useEffect(() => {
     getPrompts(solo, props.numQs, props.code).then(response => {
-      console.log(response);
       if (!response.message) {
         let firstPrompt = response.pop();
         setCurrP1(firstPrompt[0]);
@@ -40,7 +39,7 @@ export default function Game(props) {
         setRedirectHome(true);
       }
     });
-  }, [props.code]);
+  }, [solo, props.numQs, props.code]);
 
   function handleChangeSimilarity(event) {
     setSimilarity(event.target.value);
@@ -108,7 +107,6 @@ export default function Game(props) {
                 className="progress-bar"
                 role="progressbar"
                 style={progressStyle}
-                aria-valuenow="25"
                 aria-valuemin="0"
                 aria-valuemax="100"
               ></div>
