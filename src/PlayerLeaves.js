@@ -1,19 +1,27 @@
-import React from 'react';
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPagelines } from "@fortawesome/free-brands-svg-icons";
 
-function Leaf({ number, value, onClick, emptyColor, filledColor, size, clickable }) {
+function Leaf({
+  number,
+  value,
+  onClick,
+  emptyColor,
+  filledColor,
+  size,
+  clickable
+}) {
   function handleClick() {
     onClick(number === value ? 0 : number);
   }
 
   return (
-    <span className={clickable ? 'clickable' : undefined} onClick={handleClick}>
+    <span className={clickable ? "clickable" : undefined} onClick={handleClick}>
       <FontAwesomeIcon
         icon={faPagelines}
         color={number <= value ? filledColor : emptyColor}
         size={size}
-        className={(number <= value ? 'filled' : 'empty') + "-leaf"}
+        className={(number <= value ? "filled" : "empty") + "-leaf"}
       />
     </span>
   );
