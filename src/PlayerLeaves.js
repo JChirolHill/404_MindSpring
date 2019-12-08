@@ -12,15 +12,22 @@ function Leaf({
   clickable
 }) {
   function handleClick() {
-    onClick(number === value ? 0 : number);
+    if(clickable) {
+      onClick(number === value ? 0 : number);
+    }
   }
 
   return (
-    <span className={clickable ? "clickable" : undefined} onClick={handleClick}>
+    <span
+      className={clickable ? "clickable" : undefined}
+      onClick={handleClick}
+      data-testid={`leaf-${number}`}
+    >
       <FontAwesomeIcon
         icon={faPagelines}
         color={number <= value ? filledColor : emptyColor}
         size={size}
+        data-testid={"leaf-is-filled-" + (number <= value ? "1" : "0")}
         className={(number <= value ? "filled" : "empty") + "-leaf"}
       />
     </span>
@@ -34,7 +41,7 @@ export default function PlayerLeaves(props) {
     onClick = () => {},
     clickable = true,
     emptyColor = "#bbb",
-    filledColor = "yellow",
+    filledColor = "green",
     size = "1x",
     leafCount = 4
   } = props;

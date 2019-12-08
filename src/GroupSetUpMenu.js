@@ -134,6 +134,7 @@ export default function GroupSetUpMenu(props) {
                   type="text"
                   className="form-control text-center"
                   id="groupCodeField"
+                  data-testid={'input-group-code'}
                   placeholder="1234"
                   value={groupCode}
                   onChange={handleChangeGroupCode}
@@ -153,6 +154,7 @@ export default function GroupSetUpMenu(props) {
                   type="text"
                   className="form-control text-center"
                   id="usernameField"
+                  data-testid={'input-username'}
                   placeholder="A clever name"
                   max="12"
                   value={username}
@@ -165,7 +167,7 @@ export default function GroupSetUpMenu(props) {
             </div>
 
             <div className="text-right">
-              <button type="submit" className="btn_text">
+              <button type="submit" className="btn_text" data-testid="btn-join">
                 <i className="fab fa-pagelines"></i>&nbsp;Join
               </button>
             </div>

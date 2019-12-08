@@ -1,16 +1,27 @@
 # MindSpring
 
+[![Build Status](https://travis-ci.org/JChirolHill/404_MindSpring.svg?branch=master)](https://travis-ci.org/JChirolHill/404_MindSpring)
+
 Exercise your creative abilities by creating connections between two disparate items. Enables playing in both solo and multiplayer mode.
 
 ## Test It Out!
 
 https://mindspring.surge.sh/
 
+## Testing
+
+This application contains 21 testing functions with the following breakdown:
+
+| File | # of Tests |
+| --- | --- |
+| App.js | 1 test |
+| PlayerLeaves.js | 12 tests |
+| ErrorMsg.js | 2 tests |
+| GroupSetUpMenu.js | 6 tests |
+
 ## Where is the Backend Hiding?
 
 https://github.com/JChirolHill/404_Mindspring_Backend
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
