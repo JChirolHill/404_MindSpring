@@ -29,6 +29,7 @@ export default function Game(props) {
   // load all the prompts
   useEffect(() => {
     getPrompts(solo, props.numQs, props.code).then(response => {
+      console.log(response);
       if (!response.message) {
         let firstPrompt = response.pop();
         setCurrP1(firstPrompt[0]);

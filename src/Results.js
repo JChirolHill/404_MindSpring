@@ -9,14 +9,14 @@ export default function Results(props) {
   const [redirectHome, setRedirectHome] = useState(false);
   const [loading, setLoading] = useState(true);
   const [responses, setResponses] = useState([]);
-  let code;
+  let code = props.code;
 
   // check if in URL
   if (!props.solo && !props.code) {
     code = props.match.params.code;
     props.onSetCode(code);
   }
-
+  
   useEffect(() => {
     if (props.solo) {
       setLoading(false);
