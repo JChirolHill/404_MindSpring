@@ -92,7 +92,7 @@ export default function Game(props) {
   }
 
   return (
-    <DocumentTitle title="MindSpring | Results">
+    <DocumentTitle title="MindSpring | Play">
       <div>
         {redirectHome && <Redirect to="/" />}
         {redirectResults && <Redirect to="/solo/results" />}
