@@ -60,6 +60,7 @@ export default function Game(props) {
         ]
       ]);
 
+      console.log(props.numQs);
       setProgressStyle({
         width: `${parseInt((similarities.length / props.numQs) * 100)}%`
       });
@@ -130,7 +131,7 @@ export default function Game(props) {
                   <div className="form-group">
                     <div className="text-center">
                       <label htmlFor="similarityField">
-                        Come Up with a Similarity
+                        Come Up with a Similarity Between these 2 Prompts
                       </label>
                     </div>
                     <div className="">

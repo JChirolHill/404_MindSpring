@@ -30,6 +30,7 @@ export default function GroupSetUpMenu(props) {
           setJoinFormSubmitted(false);
         } else {
           // proceed to waiting
+          props.onSetNumQs(response.numQs);
           props.onSetNumPlayers(response.numPlayers);
           props.onSetGroupCode(groupCode);
           setRedirectJoin(true);

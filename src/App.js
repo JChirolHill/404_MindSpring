@@ -78,7 +78,7 @@ export default function App() {
                     <Results solo={true} responses={responses}/>
                   </Route>
                   <Route path="/multiplayer" exact>
-                    <GroupSetUpMenu numPlayers={numPlayers} onSetNumPlayers={handleSetNumPlayers} onSetGroupCode={handleSetGroupCode} onSetUsername={handleSetUsername}/>
+                    <GroupSetUpMenu numPlayers={numPlayers} onSetNumPlayers={handleSetNumPlayers} onSetGroupCode={handleSetGroupCode} onSetUsername={handleSetUsername} onSetNumQs={handleSetNumQs}/>
                   </Route>
                   <Route path="/multiplayer/setup">
                     <SetUpMenu multiplayer={true} numPlayers={numPlayers} code={groupCode} onSetGroupCode={handleSetGroupCode} onSetNumQs={handleSetNumQs} onSetUsername={handleSetUsername}/>
